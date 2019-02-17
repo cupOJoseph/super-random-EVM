@@ -79,25 +79,29 @@ contract UltraRandom is Initializable {
         require(randos[id].mixWithId != 0);
 
         uint mixedid = randos[id].mixWithId;
-        uint newrandom = getRandom(once, randos[id].randomNum, randos[mixedid].randomNum, randos[id].ready_block);
+        uint newrandom = getRandom(
+            once,
+            randos[id].randomNum,
+            randos[mixedid].randomNum,
+            uint256(blockhash(randos[id].ready_block))
+          );
 
         Rando memory instance = Rando(once, newrandom, randos[id].asker, 0, false, 0);
         randos[once] = instance;
         //emit the new random number and the things used to create it.
-        emit RandomOut(newrandom, id, mixedid, once );
+        emit RandomOut(newrandom, id, mixedid, once);
         once = once + 1;
-
         //asker (or anyone else) can see the new random number in the new Rando object.
 
         //TODO return this random somehow
-        //TODO pay hunter
+        //pay hunter
         address payable _payto = msg.sender;
         _payto.transfer(0.004 ether);
 
     }
 
-    function getRandom(uint _once, uint _seed1, uint _seed2, uint _block) internal pure returns(uint256 randomNum){
-        return uint256(keccak256(abi.encodePacked(_once, _seed1, _seed2, _block)));//TODO add blockhash
+    function getRandom(uint _once, uint _seed1, uint _seed2, uint _blockhash) internal pure returns(uint256 randomNum){
+        return uint256(keccak256(abi.encodePacked(_once, _seed1, _seed2, _blockhash)));//TODO add blockhash
     }
 
     function cashout(address payable _payto) public {
