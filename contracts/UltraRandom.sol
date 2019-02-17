@@ -2,7 +2,7 @@ pragma solidity 0.5.0;
 
 import "zos-lib/contracts/Initializable.sol";
 
-contract DecentRandom{
+contract UltraRandom is Initializable {
     address owner;
     uint once;
 
@@ -23,7 +23,7 @@ contract DecentRandom{
     mapping(uint256 => Rando) randos;
     mapping(address => uint) readyRandoms;
 
-    function init(uint8 offset1, uint8 offset2) public{
+    function initialize(uint8 offset1, uint8 offset2) initializer public {
 
         owner = msg.sender;
         once = 1;
@@ -97,7 +97,7 @@ contract DecentRandom{
     }
 
     function getRandom(uint _once, uint _seed1, uint _seed2, uint _block) internal pure returns(uint256 randomNum){
-        return uint256(keccak256(abi.encodePacked(_once, _seed1, _seed2, _block)));
+        return uint256(keccak256(abi.encodePacked(_once, _seed1, _seed2, _block)));//TODO add blockhash
     }
 
     function cashout(address payable _payto) public {
