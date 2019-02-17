@@ -3,6 +3,7 @@
   "name": "superrandom",
   "version": "0.1.0",
   "contracts": {
-    "UltraRandom": "UltraRandom"
+    "UltraRandom": "UltraRandom",
+    "DecentRandom": "DecentRandom"
   }
 }

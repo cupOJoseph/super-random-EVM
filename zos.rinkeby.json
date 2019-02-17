@@ -1,11 +1,11 @@
 {
   "contracts": {
     "UltraRandom": {
-      "address": "0xE24eb86504d5B3ff7E098a1a71A9214353a57F39",
-      "constructorCode": "608060405234801561001057600080fd5b50610c98806100206000396000f3fe",
-      "bodyBytecodeHash": "565f6b0a28b419d570e86538d0ae04b69fb5b882c3a09c18f194cad1d3491d36",
-      "localBytecodeHash": "fa2a39dad50047a856e5e0778e7de6c8d58faeaa051f6b8ad19ea8a9a62d1556",
-      "deployedBytecodeHash": "fa2a39dad50047a856e5e0778e7de6c8d58faeaa051f6b8ad19ea8a9a62d1556",
+      "address": "0xb41f6B24954Bdde8ADb8af448085a42327f4CD34",
+      "constructorCode": "608060405234801561001057600080fd5b50610c9d806100206000396000f3fe",
+      "bodyBytecodeHash": "dea4fff6681e90fb45b0bc95b112d868b486ad638943da7ee7de29eda8c65f47",
+      "localBytecodeHash": "548ea3f3aa9af2b30e7bf293a66cd796c1b4a4b52ba0ac432a3806ae4fce7758",
+      "deployedBytecodeHash": "548ea3f3aa9af2b30e7bf293a66cd796c1b4a4b52ba0ac432a3806ae4fce7758",
       "types": {
         "t_bool": {
           "id": "t_bool",
@@ -43,37 +43,37 @@
           "members": [
             {
               "label": "id",
-              "astId": 136,
+              "astId": 141,
               "type": "t_uint256",
               "src": "337:7:1"
             },
             {
               "label": "randomNum",
-              "astId": 138,
+              "astId": 143,
               "type": "t_uint256",
               "src": "358:14:1"
             },
             {
               "label": "asker",
-              "astId": 140,
+              "astId": 145,
               "type": "t_address",
               "src": "386:13:1"
             },
             {
               "label": "ready_block",
-              "astId": 142,
+              "astId": 147,
               "type": "t_uint256",
               "src": "453:16:1"
             },
             {
               "label": "pending",
-              "astId": 144,
+              "astId": 149,
               "type": "t_bool",
               "src": "483:12:1"
             },
             {
               "label": "mixWithId",
-              "astId": 146,
+              "astId": 151,
               "type": "t_uint256",
               "src": "509:14:1"
             }
@@ -97,7 +97,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initialized",
-          "astId": 520,
+          "astId": 529,
           "type": "t_bool",
           "src": "757:24:2"
         },
@@ -105,7 +105,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "initializing",
-          "astId": 522,
+          "astId": 531,
           "type": "t_bool",
           "src": "876:25:2"
         },
@@ -113,7 +113,7 @@
           "contract": "Initializable",
           "path": "zos-lib/contracts/Initializable.sol",
           "label": "______gap",
-          "astId": 571,
+          "astId": 580,
           "type": "t_array:50<t_uint256>",
           "src": "1891:29:2"
         },
@@ -121,7 +121,7 @@
           "contract": "UltraRandom",
           "path": "contracts/UltraRandom.sol",
           "label": "owner",
-          "astId": 112,
+          "astId": 117,
           "type": "t_address",
           "src": "115:13:1"
         },
@@ -129,7 +129,7 @@
           "contract": "UltraRandom",
           "path": "contracts/UltraRandom.sol",
           "label": "once",
-          "astId": 114,
+          "astId": 119,
           "type": "t_uint256",
           "src": "134:9:1"
         },
@@ -137,7 +137,7 @@
           "contract": "UltraRandom",
           "path": "contracts/UltraRandom.sol",
           "label": "pendingRandos",
-          "astId": 150,
+          "astId": 155,
           "type": "t_array:dyn<t_uint256>",
           "src": "540:20:1"
         },
@@ -145,7 +145,7 @@
           "contract": "UltraRandom",
           "path": "contracts/UltraRandom.sol",
           "label": "randos",
-          "astId": 154,
+          "astId": 159,
           "type": "t_mapping<t_struct<UltraRandom.Rando>>",
           "src": "566:32:1"
         },
@@ -153,9 +153,100 @@
           "contract": "UltraRandom",
           "path": "contracts/UltraRandom.sol",
           "label": "readyRandoms",
-          "astId": 158,
+          "astId": 163,
           "type": "t_mapping<t_uint256>",
           "src": "604:37:1"
+        }
+      ],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": [],
+        "storageUncheckedVars": [
+          {
+            "contract": "UltraRandom",
+            "path": "contracts/UltraRandom.sol",
+            "label": "randos",
+            "astId": 159,
+            "type": "t_mapping<t_struct<UltraRandom.Rando>>",
+            "src": "566:32:1"
+          }
+        ],
+        "storageDiff": []
+      }
+    },
+    "DecentRandom": {
+      "address": "0x3d03e833c9085409D55E12C478Cb902E1F796f00",
+      "constructorCode": "608060405234801561001057600080fd5b506104f9806100206000396000f3fe",
+      "bodyBytecodeHash": "2a9c243f1a252e40c5dd787dc3fef3599322dfc50b76d6fdc719f1a8532768e3",
+      "localBytecodeHash": "8f291d39be45e18aaada9fb0d55faa0137cb5cce64e1d29dcf0761532cda3b39",
+      "deployedBytecodeHash": "8f291d39be45e18aaada9fb0d55faa0137cb5cce64e1d29dcf0761532cda3b39",
+      "types": {
+        "t_bool": {
+          "id": "t_bool",
+          "kind": "elementary",
+          "label": "bool"
+        },
+        "t_uint256": {
+          "id": "t_uint256",
+          "kind": "elementary",
+          "label": "uint256"
+        },
+        "t_array:50<t_uint256>": {
+          "id": "t_array:50<t_uint256>",
+          "valueType": "t_uint256",
+          "length": "50",
+          "kind": "array",
+          "label": "uint256[50]"
+        },
+        "t_address": {
+          "id": "t_address",
+          "kind": "elementary",
+          "label": "address"
+        }
+      },
+      "storage": [
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initialized",
+          "astId": 529,
+          "type": "t_bool",
+          "src": "757:24:2"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "initializing",
+          "astId": 531,
+          "type": "t_bool",
+          "src": "876:25:2"
+        },
+        {
+          "contract": "Initializable",
+          "path": "zos-lib/contracts/Initializable.sol",
+          "label": "______gap",
+          "astId": 580,
+          "type": "t_array:50<t_uint256>",
+          "src": "1891:29:2"
+        },
+        {
+          "contract": "DecentRandom",
+          "path": "contracts/DecentRandom.sol",
+          "label": "owner",
+          "astId": 6,
+          "type": "t_address",
+          "src": "115:13:0"
+        },
+        {
+          "contract": "DecentRandom",
+          "path": "contracts/DecentRandom.sol",
+          "label": "randomSeed",
+          "astId": 8,
+          "type": "t_uint256",
+          "src": "134:18:0"
         }
       ],
       "warnings": {
@@ -170,5 +261,14 @@
   "solidityLibs": {},
   "proxies": {},
   "zosversion": "2.2",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "app": {
+    "address": "0x6f85C8BD3D1F5461CCCa8830474fF39781180f9C"
+  },
+  "package": {
+    "address": "0xC343B8981cBA2B8d9b6eAa5b87ddc0C5D94a5B73"
+  },
+  "provider": {
+    "address": "0x08eF8A7B0330e34deCf57D46931B7EA33FDf210b"
+  }
 }
